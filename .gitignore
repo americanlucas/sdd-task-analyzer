@@ -1,3 +1,7 @@
+﻿# Arquivos
 CLAUDE.md
-__pycache__/
 relatorio.md
+# Pastas
+__pycache__/
+.pyest_cache/
+.venv/
