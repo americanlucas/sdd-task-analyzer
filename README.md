@@ -21,6 +21,7 @@ sdd-task-analyzer/
 ├── tests/
 │   ├── conftest.py
 │   └── test_harness.py
+├── .venv/                # ambiente virtual local (não versionado)
 ├── .gitignore
 ├── CONTEXT_RULES.md
 ├── README.md
@@ -29,7 +30,38 @@ sdd-task-analyzer/
 
 ## Como executar os testes
 
-```bash
+Requer Python 3.11+. As dependências ficam isoladas em um ambiente virtual (`.venv/`, ignorado pelo git).
+
+### 1. Criar o ambiente virtual (apenas na primeira vez)
+
+```powershell
+py -3.13 -m venv .venv
+```
+
+### 2. Ativar o ambiente virtual
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+> Se o PowerShell bloquear a execução do script, rode uma vez:
+> `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned`.
+> No Linux/macOS use `source .venv/bin/activate`.
+
+### 3. Instalar as dependências
+
+```powershell
 pip install -r requirements.txt
+```
+
+### 4. Rodar os testes
+
+```powershell
 pytest
+```
+
+Sem ativar o ambiente, também é possível chamar o pytest direto pelo interpretador do venv:
+
+```powershell
+.\.venv\Scripts\python.exe -m pytest
 ```
