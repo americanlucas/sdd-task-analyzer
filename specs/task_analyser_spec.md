@@ -239,7 +239,29 @@ Regras rígidas fornecidas aos agentes de IA para garantir a qualidade do códig
 
 ## 10\. Arquitetura do Repositório
 
-![][image2]
+```md
+sdd-task-analyzer/
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+├── specs/
+│   └── task_analyser_spec.md
+├── src/
+│   ├── __init__.py
+│   ├── analyzer.py
+│   ├── exceptions.py
+│   └── models.py
+├── tests/
+│   ├── conftest.py
+│   └── test_harness.py
+├── .venv/                # ambiente virtual local (não versionado)
+├── .gitignore
+├── CONTEXT_RULES.md
+├── README.md
+├── Dockerfile
+├── docker-compose.yml
+└── requirements.txt
+```
 
 > A modularização de `src/` segue diretamente RNF01 (SRP): cada módulo tem uma única responsabilidade — modelagem de dados, exceções e cálculo dos indicadores não compartilham o mesmo arquivo.
 

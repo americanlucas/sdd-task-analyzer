@@ -25,6 +25,8 @@ sdd-task-analyzer/
 ├── .gitignore
 ├── CONTEXT_RULES.md
 ├── README.md
+├── Dockerfile
+├── docker-compose.yml
 └── requirements.txt
 ```
 
