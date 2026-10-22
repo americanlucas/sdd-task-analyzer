@@ -90,7 +90,7 @@ docker run --rm sdd-task-analyzer
 
 ## CI (GitHub Actions)
 
-O workflow `.github/workflows/ci.yml` roda a cada `push` e `pull_request`, em `ubuntu-latest`, com uma matriz de Python **3.11** e **3.13** (`fail-fast` desligado, então uma versão não cancela a outra). Os passos espelham a execução local:
+O workflow `.github/workflows/ci.yml` roda a cada `push` e `pull_request`, em `ubuntu-24.04`, com uma matriz de Python **3.11** e **3.13** (`fail-fast` desligado, então uma versão não cancela a outra). Os passos espelham a execução local:
 
 1. Checkout do repositório.
 2. Configuração do Python, com cache do pip a partir do `requirements.txt`.
